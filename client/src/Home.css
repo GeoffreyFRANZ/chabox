@@ -1,0 +1,172 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Barre latérale */
+.sidebar {
+    width: 20%;
+    background-color: #f7f7f7;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #ddd;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 20px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #eee;
+}
+
+.conversations {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.conversations h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+}
+
+.conversation {
+    height: 40px;
+    background-color: #e8f4ff;
+    border-radius: 4px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.conversation.active {
+    background-color: #ffccd5;
+}
+
+/* Contenu principal */
+.main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.new-message {
+    background-color: #ccffcc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 14px;
+    margin: 0;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.messages {
+    margin-bottom: 20px;
+}
+
+/* Styles des formulaires */
+.message-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    margin-right: 10px;
+}
+
+.text-input {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.text-input:focus {
+    border-color: #007bff;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    color: #888;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}

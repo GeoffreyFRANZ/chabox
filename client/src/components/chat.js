@@ -124,7 +124,7 @@ function Chat() {
       <div
         style={{
           position: 'fixed',
-          top: 0,
+          bottom: '20',
           right: isOpen ? '25%' : '-3020px',
           width: '75%',
           height: '100vh',

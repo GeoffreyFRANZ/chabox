@@ -2,7 +2,7 @@
 .container {
       width: '70%';
           padding: '20px';
-          borderRight: '1px solid #ddd';
+          border-right: '1px solid #ddd';
   }
   
   /* Left Column Styling */

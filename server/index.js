@@ -13,23 +13,32 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 // Exemple de données
 async function seedDatabase() {
   try {
-    // Insérer des utilisateurs
-    const user1 = await User.create({
-      nom: 'john',
-      prenom: 'doe',
-      email: 'john.doe@example.com',
-      password: 'azerty',
-      status: 'online'
-    });
-    const user2 = await User.create({
-      nom: 'jojo',
-      prenom: 'doe',
-      email: 'john@example.com',
-      password: 'azerty',
-      status: 'online'
-    });
+    //MP - Verifier si la BDD est vide
+    let testUser = User.find();
+    //MP - Si base vide
+    if (testUser && testUser.count() == 0) {
+      // Insérer des utilisateurs
+      const user1 = await User.create({
+        nom: 'john',
+        prenom: 'doe',
+        email: 'john.doe@example.com',
+        password: 'azerty',
+        status: 'online'
+      });
+      const user2 = await User.create({
+        nom: 'jojo',
+        prenom: 'doe',
+        email: 'john@example.com',
+        password: 'azerty',
+        status: 'online'
+      });
+    }
 
-    // Insérer des messages
+    //MP - Verifier si la BDD est vide
+    let testMessage = User.find();
+    //MP - Si base vide
+    if (testMessage && testMessage.count() == 0) {
+      // Insérer des messages
     await Message.create({
       sender_id: user1._id,
       receiver_id: user2._id,
@@ -45,7 +54,8 @@ async function seedDatabase() {
       dateSent: new Date(),
       dateView: new Date()
     });
-
+    }
+    
     console.log('Données insérées avec succès.');
     process.exit();
   } catch (err) {

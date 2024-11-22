@@ -1,5 +1,5 @@
 import React from 'react';
-import Chat from './chat'; // Adjust the path based on your project structure
+import Chat from './chat';
 import '../home.css'; // Import the CSS file
 
 function Home() {

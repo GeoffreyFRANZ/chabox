@@ -1,0 +1,32 @@
+/* General styling */
+.container {
+      width: '70%';
+          padding: '20px';
+          borderRight: '1px solid #ddd';
+  }
+  
+  /* Left Column Styling */
+  .left-column {
+    width: 70%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .left-column h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .left-column p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Right Column Styling */
+  .right-column {
+    width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -6,6 +6,7 @@ const cors = require('cors');
 const path = require('path');
 const User = require('./models/User');
 const Message = require('./models/Message');
+const {listUsers} = require("./controllers/userController");
 require('dotenv').config(); // Charger les variables d'environnement
 // Initialiser l'application Express
 const app = express();
@@ -35,6 +36,7 @@ mongoose.connect(mongoURI, {
   .catch(err => console.error('Erreur de connexion à MongoDB :', err));
 
 
+
 // API REST pour récupérer les messages
 app.get('/api/messages', async (req, res) => {
   const { sender_id, receiver_id } = req.query;
@@ -58,7 +60,14 @@ app.get('/api/messages', async (req, res) => {
 });
 
 
-
+app.get('/api/users/', async (req, res) => {
+  try {
+    const users = await User.find();
+    return res.json(users);
+  } catch (error) {
+    return res.status(500).json({ error: 'An error occurred while fetching users' });
+  }
+});
 app.get('/api/users/:userId', async (req, res) => {
   const { userId } = req.params;
 

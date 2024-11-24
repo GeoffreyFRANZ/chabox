@@ -1,5 +1,5 @@
 const userRepository =  require('../repository/userRepository')
 
-exports.listUsers = async () => {
-    return await userRepository.findsUsers('n')
+exports.listUsers = async (val) => {
+    return await userRepository.findsUsers(val)
 }
